@@ -1,0 +1,22 @@
+<!-- <p>home works!</p> -->
+<div class="header">
+    <button class="button" (click)="home()">HOME</button>
+    <button class="button" (click)="addItems()">ADD ITEMS</button>
+    <button class="button" (click)="listItems()">LIST ITEMS</button>
+    <button class="button" style="float: right;">Logout</button>
+</div>
+<div class="body">
+    <div style="border:solid 2px;">
+        <app-add-items *ngIf="service.mode=='add'"></app-add-items>
+        <app-list-items *ngIf="service.mode=='list'"></app-list-items>
+    </div>
+    <div style="border: solid 2px;">
+        <div>
+            <img class="image" src="../../assets/logo.jpg" alt="logo" width="250" height="250">
+        </div>
+        <div>
+            <h3 style="text-align: center;">Data from Backend - Node JS</h3>
+            {{description}}
+        </div>
+    </div>
+</div>

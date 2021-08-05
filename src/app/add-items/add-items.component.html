@@ -1,0 +1,32 @@
+<h3 style="text-align: center;">ADD ITEMS</h3>
+
+<form class="basic-container" [formGroup]="profileForm">
+    <div formArrayName="profile">
+        <div class="row" *ngFor="let profile of profileForm.get('profile').controls; let i = index" [formGroupName]="i">
+            <div class="fields">
+                <label for="first-name">First Name: </label>
+                <input id="first-name" type="text" formControlName="firstName">
+            </div>
+            <div class="fields">
+                <label for="last-name">Last Name: </label>
+                <input id="last-name" type="text" formControlName="lastName">
+            </div>
+            <div class="fields">
+                <label for="contact-No">Contact No </label>
+                <input id="contact-No" type="number" formControlName="contactNo">
+            </div>
+            <div class="fields">
+                <label for="last-name">City: </label>
+                <select formControlName="city">
+                    <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                  </select>
+            </div>
+            <button class="remove" (click)="removeOrClearEmail(i)">REMOVE
+            </button>
+        </div>
+    </div>
+    <div style="margin-top: 20px;display:flex;justify-content: space-evenly;">
+        <button class="add" (click)="addEmailFormGroup()">ADD</button>
+        <button class="submit" (click)="submit()">Submit</button>
+    </div>
+</form>

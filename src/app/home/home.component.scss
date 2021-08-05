@@ -1,0 +1,38 @@
+.button {
+    background-color: #2e3192;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  button:focus {
+      color: black;
+    background: #e5e5e5;
+    outline: none;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+  }
+  .header{
+    width: 98%;
+    background: aliceblue;
+    padding: 10px;
+    border-bottom: solid 1px;
+  }
+  .body{
+    display: grid;
+    grid-template-columns: 68% 30%;
+    height: 86vh;
+    margin: 10px;
+    grid-gap: 2%;
+  }
+  .image{
+    margin: auto;
+    display: block;
+  }
